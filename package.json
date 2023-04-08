@@ -1,7 +1,7 @@
 {
   "name": "team-practice",
   "version": "0.1.0",
-  "homepage": "https://github.com/Andrii0207/team-practice.git",
+  "homepage": "https://Andrii0207.github.io/team-practice/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
