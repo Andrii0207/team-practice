@@ -28,6 +28,7 @@ export const App = () => {
           <Route path="events" element={<EventPage />}>
             <Route path=":id" element={<EventSubPage />} />
           </Route>
+          <Route path="events/:id/details" element={<Details />} />
           <Route path="search" element={<SearchPage />}>
             <Route path=":id" element={<EventSubPage />} />
           </Route>

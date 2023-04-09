@@ -1,6 +1,6 @@
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { fetchEventById } from '../service/api';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const EventSubPage = () => {
   const [query, setQuery] = useState(null);
@@ -26,8 +26,8 @@ export const EventSubPage = () => {
     <div>
       <img src={images[0].url} alt="" width="400px" />
       <p>name: {name}</p>
-      <p>genre: {classifications[0].genre.name}</p>
-      <p>subgenre: {classifications[0].subGenre.name}</p>
+      <p>genre: {classifications[0].genre?.name}</p>
+      <p>subgenre: {classifications[0].subGenre?.name}</p>
       <Link to="details" state={{ from: location }}>
         More Details
       </Link>

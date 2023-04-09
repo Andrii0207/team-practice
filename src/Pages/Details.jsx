@@ -28,15 +28,15 @@ export const Details = ({ id }) => {
       <Link type="button" to={refLocation.current}>
         GO BACK
       </Link>
-      <p>Name: {name}</p>
-      <p>Genre: {classifications[0].genre.name}</p>
+      <p>Name: {name ? name : 1}</p>
+      <p>Genre: {name && classifications[0].genre?.name}</p>
       {(ageRestrictions || ageRestrictions?.ageRuleDescription) && (
         <p>age: {ageRestrictions?.ageRuleDescription} </p>
       )}
 
       {
         <div>
-          <img src={images[0].url} alt={name} />
+          <img src={images[0].url} alt="" />
         </div>
       }
       {info && <p style={{ width: '800px' }}>{info}</p>}
