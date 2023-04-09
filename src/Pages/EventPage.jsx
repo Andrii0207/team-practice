@@ -1,8 +1,8 @@
-import { fetchEvents } from '../Servis/Events';
+import { fetchEvents } from '../service/api';
 import { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-const EventsPage = () => {
+const EventPage = () => {
   const [events, setEvents] = useState([]);
 
   const location = useLocation();
@@ -29,4 +29,4 @@ const EventsPage = () => {
   );
 };
 
-export { EventsPage };
+export { EventPage };

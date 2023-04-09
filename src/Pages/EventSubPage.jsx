@@ -1,5 +1,5 @@
 import { Link, useLocation, useParams } from 'react-router-dom';
-import { fetchEventById } from '../Servis/Events';
+import { fetchEventById } from '../service/api';
 import { useEffect, useState } from 'react';
 
 export const EventSubPage = () => {

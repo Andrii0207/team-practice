@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchEventsByName } from '../Servis/Events';
+import { fetchEventsByName } from '../service/api';
 import { useSearchParams, Link, Outlet } from 'react-router-dom';
 
 const SearchPage = () => {
@@ -15,6 +15,7 @@ const SearchPage = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
+
     setSearchParams({ eventname: form.elements.eventname.value });
     form.reset();
   };
