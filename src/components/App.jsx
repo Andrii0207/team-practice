@@ -1,11 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
 // import { ToastContainer } from 'react-toastify';
 import { Layout } from './Layout/Layout';
 import { HomePage } from '../Pages/HomePage';
-import { EventPage } from 'Pages/EventPage';
 import { SearchPage } from 'Pages/SearchPage';
-import { EventSubPage } from '../Pages/EventSubPage';
-import { Details } from 'Pages/Details';
+import { NotFound } from 'Pages/NotFound';
+
+// import { EventSubPage } from '../Pages/EventSubPage';
+// import { Details } from 'Pages/Details';
+// import EventPage from 'Pages/EventPage';
+const EventPage = lazy(() => import('Pages/EventPage'));
+const EventSubPage = lazy(() => import('../Pages/EventSubPage'));
+const Details = lazy(() => import('Pages/Details'));
 
 export const App = () => {
   return (
@@ -33,7 +39,7 @@ export const App = () => {
             <Route path=":id" element={<EventSubPage />} />
           </Route>
           <Route path="search/:id/details" element={<Details />} />
-          {/* <Route path="*" element={<div>Not Found</div>}>  */}
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>

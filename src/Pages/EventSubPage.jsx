@@ -2,7 +2,7 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import { fetchEventById } from '../service/api';
 import { useEffect, useState } from 'react';
 
-export const EventSubPage = () => {
+const EventSubPage = () => {
   const [query, setQuery] = useState(null);
 
   const location = useLocation();
@@ -34,3 +34,5 @@ export const EventSubPage = () => {
     </div>
   );
 };
+
+export default EventSubPage;

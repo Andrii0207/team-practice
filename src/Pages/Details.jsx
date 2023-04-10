@@ -2,7 +2,7 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import { fetchEventById } from '../service/api';
 import { useEffect, useRef, useState } from 'react';
 
-export const Details = ({ id }) => {
+const Details = ({ id }) => {
   const [item, setItem] = useState(null);
 
   const params = useParams().id;
@@ -43,3 +43,5 @@ export const Details = ({ id }) => {
     </div>
   );
 };
+
+export default Details;

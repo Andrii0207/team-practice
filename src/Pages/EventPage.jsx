@@ -1,5 +1,5 @@
 import { fetchEvents } from '../service/api';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 const EventPage = () => {
@@ -24,9 +24,11 @@ const EventPage = () => {
           );
         })}
       </ul>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
 
-export { EventPage };
+export default EventPage;
